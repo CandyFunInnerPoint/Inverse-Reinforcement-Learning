@@ -1,0 +1,50 @@
+# Environment settings
+env:
+  grid_size: 32
+  num_obj: 50
+  num_colours: 2
+  num_actions: 5
+  wind: 0.3
+  gamma: 0.99
+
+# Dataset configuration
+dataset:
+  dataset_path: ./dataset
+  traj_length: 8
+  num_traj: 128
+
+
+# Train configuration
+train:
+  dataset_path: ./dataset
+  result_folder: ./results
+
+# iavi configuration
+iavi:
+  gamma: 0.99
+  theta: 0.001
+
+#iql configuration
+iql:
+  alpha_r: 0.02
+  alpha_q: 0.001
+  alpha_sh: 0.001
+  epochs: 620
+
+# Eval configuration
+eval:
+  dataset_path: ./dataset
+  result_folders: 
+    # - ./results/iql/run_1
+    # - ./results/iql/run_2
+    # - ./results/iql/run_3
+    # - ./results/iql/run_4
+    # - ./results/iql/run_5
+    - ./results/iavi/run_1
+    # - ./results/iavi/run_2
+    # - ./results/iavi/run_3
+    # - ./results/iavi/run_4
+    # - ./results/iavi/run_5
+
+
+
